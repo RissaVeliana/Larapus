@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'web'], function() {
 
 
-Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']], function(){
+Route::group(['prefix'=>'admin','middleware'=>['auth']], function(){
 	Route::resource('authors','AuthorsController');
 	});
 
