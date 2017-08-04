@@ -11,9 +11,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="/css/jquery.dataTables.css" >
+    <link rel="stylesheet"  href="/css/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awasome.min.css">
     <link rel="stylesheet"  href="/css/bootstrap.min.css">
     <link href="/css/app.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -40,7 +43,12 @@
                     <ul class="nav navbar-nav">
                         @if (Auth::check())
                             <li><a href="{{ url('/home')}}"> Dashboard</a></li>
+                        </li>
                         @endif
+                        @role('admin')
+                            <li><a href="{{ route('authors.index')}} ">Penulis</a></li>
+                        @endrole
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -81,6 +89,8 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js" ></script>
+    <script src="/js/dataTables.bootstrap.min.js" ></script>
     @yield('scripts')
 </body>
 </html>
