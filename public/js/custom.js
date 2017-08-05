@@ -4,5 +4,10 @@ $(document).ready(function(){
 		var text = $el.data('confirm')? $el.data('confirm'):'Anda yakin melakukan tindakan ini?'
 		var c = confirm(text);
 		return c;
+		
 	});
+	$('.js-selectize').selectize({
+		sortField: 'text'
+	});
+
 });

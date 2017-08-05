@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     //
-    protected $fillable = ['title', 'author_id', 'amount'];
+    protected $fillable = ['title', 'author_id', 'amount','cover'];
 
 
-    public function authors()
+    public function author()
     {
     	return $this->belongsTo('App\Author');
     }

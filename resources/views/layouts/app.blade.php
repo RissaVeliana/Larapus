@@ -16,6 +16,9 @@
     <link rel="stylesheet" type="text/css" href="/css/font-awasome.min.css">
     <link rel="stylesheet"  href="/css/bootstrap.min.css">
     <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/selectize.css">
+    <link rel="stylesheet" href="/css/selectize.bootstrap3.css">
+
 
 </head>
 <body>
@@ -88,6 +91,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="/js/selectize.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.dataTables.min.js" ></script>

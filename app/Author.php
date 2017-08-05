@@ -15,7 +15,7 @@ class Author extends Model
 
     	self::deleteing(function($author){
     		if ($author->books->count() > 0){
-    			$html = 'Penulis tidak bisa dihapus karena masih memilikibuku :';
+    			$html = 'Penulis tidak bisa dihapus karena masih memiliki buku :';
     			$html .= '<ul>';
     			foreach ($author->books as $book)
     			 {
